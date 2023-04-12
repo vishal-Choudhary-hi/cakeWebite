@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cake Shop</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+	<div class="navbar">
+		<img src="./images/logo.png" alt="Cake Shop Logo" class="logo">
+		<ul class="nav-links">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="contactus.html">Contact Us</a></li>
+		</ul>
+	</div>
+
+	<div class="carousel-container">
+		<img src="./images/cake1.jpg" alt="Cake 1" class="carousel-img">
+		<img src="./images/cake2.jpg" alt="Cake 2" class="carousel-img hidden">
+		<img src="./images/cake3.jpg" alt="Cake 3" class="carousel-img hidden">
+		<button class="prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+		<button class="next-btn" onclick="changeSlide(1)">&#10095;</button>
+	</div>
+  <section id="offers">
+    <div class="container">
+      <h2 class="section-title">Special Offers</h2>
+      <div class="offer-cards">
+        <div class="offer-card">
+          <div class="offer-img">
+            <img src="https://londontheinside.com/wp-content/uploads/2014/03/SALE1.jpg" alt="Offer 1">
+          </div>
+          <div class="offer-text">
+            <h3>50% Off on All Cakes</h3>
+            <p>Use code CAKE50 at checkout to get 50% off on all cakes.</p>
+            <a href="#" class="offer-btn">Shop Now</a>
+          </div>
+        </div>
+        <div class="offer-card">
+          <div class="offer-img">
+            <img src="./images/offer2.png" alt="Offer 2">
+          </div>
+          <div class="offer-text">
+            <h3>Free Shipping</h3>
+            <p>Get free shipping on all orders over Rs 500.</p>
+            <a href="#" class="offer-btn">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="top-products">
+    <div class="container">
+      <h2 class="section-title">Top Products</h2>
+      <div class="product-cards">
+        <div class="product-card">
+          <div class="product-img">
+            <img src="data:image/jpeg;base64,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" alt="Product 1">
+          </div>
+          <div class="product-text">
+            <h3 class="card-title">Chocolate Cake</h3>
+            <p class="card-desc">Delicious chocolate cake with rich chocolate frosting.</p>
+            <p class="card-price">Rs 500</p>
+            <button class="card-btn">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="data:image/jpeg;base64,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" alt="Product 2">
+          </div>
+          <div class="product-text">
+            <h3 class="card-title">Strawberry Cake</h3>
+            <p class="card-desc">Fresh strawberry cake with whipped cream frosting.</p>
+            <p class="card-price">Rs 600</p>
+            <button class="card-btn">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="data:image/jpeg;base64,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" alt="Product 3">
+          </div>
+          <div class="product-text">
+            <h3 class="card-title">Choco Truffle Cake</h3>
+            <p class="card-desc">Love chocolate? Then this tender, luxurious layer cake is for you.</p>
+            <p class="card-price">Rs 700</p>
+            <button class="card-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  
+	<div class="products-container">
+		<h2>Our Products</h2>
+		<div class="card-container">
+			<div class="card">
+				<img src="https://th.bing.com/th/id/OIP.wo4Mlflnn13NrACftVTd3wHaFj?w=235&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7" alt="Cake 1" class="card-img">
+				<div class="card-body">
+					<h3 class="card-title">Birthday Cake</h3>
+					<p class="card-text">Indulge in a slice of happiness with our irresistible birthday cakes, baked with love and care</p>
+					<button class="card-btn">Order Now</button>
+				</div>
+			</div>
+			<div class="card">
+				<img src="https://www.fnp.com/images/pr/l/v20211115144355/anniversary-special-chocolate-cake-half-kg_1.jpg" alt="Cake 2" class="card-img">
+				<div class="card-body">
+					<h3 class="card-title">Anniversary Cake</h3>
+					<p class="card-text">Beautiful wedding anniversary cakes as we understand that you want the best of everything.</p>
+					<button class="card-btn">Order Now</button>
+				</div>
+			</div>
+			<div class="card">
+				<img src="https://th.bing.com/th/id/OIP.3yMBE6y3oqMLOPc3l2emUQHaHa?w=179&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7" alt="Cake 3" class="card-img">
+				<div class="card-body">
+					<h3 class="card-title">Kids Cake</h3>
+					<p class="card-text">Kids are those blooms that spread happiness in one's life.</p>
+					<button class="card-btn">Order Now</button>
+				</div>
+			</div>
+		</div>
+	</div>
+  <section id="quality-promise">
+    <div class="container">
+      <h2>Quality & Promise</h2>
+      <div>
+        <div class="qualityImg">
+          <img src="./images/quality.png" alt="Quality">
+        </div>
+        <div class="col-md-6">
+          <p>We take pride in the quality of our products and promise to use only the finest ingredients in all our cakes. Our team of expert bakers and decorators work tirelessly to ensure that every cake is not only visually stunning but also delicious. We believe that every cake should be a work of art, and we strive to exceed your expectations with every order.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Products</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-square"></i></a>
+        <a href="#"><i class="fab fa-twitter-square"></i></a>
+        <a href="#"><i class="fab fa-instagram-square"></i></a>
+      </div>
+    </div>
+  </footer>
+  
+	<script src="script.js"></script>
+
+</body>
+</html>
